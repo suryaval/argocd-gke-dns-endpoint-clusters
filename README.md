@@ -8,16 +8,15 @@ Helm's [documentation](https://helm.sh/docs) to get started.
 
 Once Helm has been set up correctly, add the repo as follows:
 
-  helm repo add <alias> https://<orgname>.github.io/helm-charts
+>  helm repo add argocd-cluster-management https://suryaval.github.io/argocd-gke-dns-endpoint-clusters/
 
 If you had already added this repo earlier, run `helm repo update` to retrieve
-the latest versions of the packages.  You can then run `helm search repo
-<alias>` to see the charts.
+the latest versions of the packages.  You can then run `helm search repo argocd-cluster-management` to see the charts.
 
-To install the <chart-name> chart:
+To install the `argocd-gke-dns-endpoint-clusters`chart:
 
-    helm install my-<chart-name> <alias>/<chart-name>
+  >  helm install argocd-gke-dns-endpoint-clusters argocd-cluster-management/argocd-gke-dns-endpoint-clusters
 
 To uninstall the chart:
 
-    helm uninstall my-<chart-name>
+  >  helm uninstall argocd-gke-dns-endpoint-clusters
