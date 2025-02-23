@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  argocd-gke-dns-endpoint-clusters:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-02-23T05:39:58.383107348Z"
+    description: Helm chart to maintain kubernetes clusters through GitOps
+    digest: 2ad7b53488560313a81a0ac039154d71f3e3e1dbde9c0c9c96c8f622448239f3
+    name: argocd-gke-dns-endpoint-clusters
+    type: application
+    urls:
+    - https://github.com/suryaval/argocd-gke-dns-endpoint-clusters/releases/download/argocd-gke-dns-endpoint-clusters-1.0.1/argocd-gke-dns-endpoint-clusters-1.0.1.tgz
+    version: 1.0.1
+generated: "2025-02-23T05:39:58.383113469Z"
