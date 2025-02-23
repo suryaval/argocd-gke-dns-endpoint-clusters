@@ -1,0 +1,9 @@
+project: myawesometeam
+clusters:
+  - name: sample1
+    endpoint: https://gke-2cd84d0b463941f89de0edc304aaf58ddf05-0909090909.us-central1-c.gke.goog
+    labels:
+      clusterName: sample1
+      region: us-central1-c
+  - name: sample2
+    endpoint: https://gke-2cd84d0b463941f89de0edc304aaf58ddf05-0909090909.us-central1-c.gke.goog

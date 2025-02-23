@@ -1,0 +1,30 @@
+{{$project := .Values.project}}
+{{- range $key, $value := .Values.clusters }}
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{ printf "%s-%s" $project $value.name | trunc 253 | trimSuffix "-" }}
+  labels:
+    argocd.argoproj.io/secret-type: cluster
+    {{- with $value.labels }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+type: Opaque
+stringData:
+  name: {{ $value.name }}
+  server: {{ $value.endpoint }}
+  project: {{ $project }}
+  config: |
+    {
+      "execProviderConfig": {
+        "command": "argocd-k8s-auth",
+        "args": ["gcp"],
+        "apiVersion": "client.authentication.k8s.io/v1beta1"
+      },
+      "tlsClientConfig": {
+        "insecure": false,
+        "caData": ""
+      }
+    }
+{{- end }}
