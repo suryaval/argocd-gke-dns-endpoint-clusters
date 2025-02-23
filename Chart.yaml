@@ -2,5 +2,5 @@ apiVersion: v2
 name: argocd-gke-dns-endpoint-clusters
 description: Helm chart to maintain kubernetes clusters through GitOps
 type: application
-version: 1.0.0
+version: 1.0.1
 appVersion: "1.0.0"
